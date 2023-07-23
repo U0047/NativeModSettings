@@ -1,10 +1,12 @@
-# NATIVE SETTINGS MODS (v0.9)
+# NATIVE SETTINGS MOD (RELEASE v0.9)
 *mod resource allowing addition of custom settings to main options screen*
 https://github.com/U0047/NativeSettingsMod/
+Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://www,github.com/u0047/NativeModSetting/issue)
+
 ---
 
-
-Native Settings Mod is a Zomboid modder's resource that gives mod developers the ability to add a variety of user-friendly, seamless mod settings to the native Main Options page (accessed when clicking 'Options' from the Intro Screen or Pause Screen), under a new 'Native Mod Settings' tab. This allows mod users to easily configure mods without needing to edit mod files directly.
+##Overview
+Native Settings Mod is a Zomboid modder's resource that gives mod developers the ability to add a variety of user-friendly, seamless mod settings to the native Main Options page (accessed when clicking 'Options' from the Intro Screen or Pause Screen), under a new 'Native Settings Mod' tab. This allows mod users to easily configure mods without needing to edit mod files directly.
 
 Native Settings Mod currently offers the following settings:
 - `YesNoBox` - a boolean tick mark box
@@ -25,7 +27,6 @@ Native Settings Mod must be enabled in the main menu's ['mods' page as well as i
 ---
 
 ## About Multiplayer Use
-
 At it's current version *(release v0.9),* Native Settings Mod **is completely untested** in multiplayer. 
 
 While problems are not anticipated, Native Settings makes **zero** guarantee that Native Settings Mod will work in multiplayer.

@@ -1,5 +1,7 @@
-# NATIVE SETTINGS MODS DOCUMENTATION (v0.9)
+# NATIVE SETTINGS MODS DOCUMENTATION (RELEASE v0.9)
 https://github.com/U0047/NativeSettingsMod/
+Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://www,github.com/u0047/NativeModSetting/issue)
+
 
 ## Table of Contents 
 
@@ -8,12 +10,12 @@ https://github.com/U0047/NativeSettingsMod/
 3. [About Multiplayer Use](#about-multiplayer-use)
 4. [Quick Guide](#quick-guide)
 5. [Settings Setup](#settings-setup)
-6. [Disabling and Hiding Settings](disabling-and-hiding-Settings)
+6. [Disabling and Hiding Settings](#disabling-and-hiding-Settings)
 7. [Custom Settings](#custom-settings)
-8. [Disabling and Hiding Settings](disabling-and-hiding-settings)
-9. [Appendix](appendix)
-	1. [The Nitty-Gritty Details](the-nitty-gritty-details)
-	2. [Miscellaneous Functions](miscellanoeous-functions)
+8. [Disabling and Hiding Settings](#disabling-and-hiding-settings)
+9. [Appendix](#appendix)
+	1. [The Nitty-Gritty Details](#the-nitty-gritty-details)
+	2. [Miscellaneous Functions](#miscellanoeous-functions)
 
 ---
 
@@ -40,7 +42,6 @@ Native Settings Mod must be enabled in the main menu's ['Mods' page as well as i
 ---
 
 ## A Word About Multiplayer Use
-
 At it's current version *(release v0.9),* Native Settings Mod **is completely untested** in multiplayer. 
 
 While problems are not anticipated, Native Settings makes **zero** guarantee that Native Settings Mod will work in multiplayer.
@@ -543,7 +544,7 @@ Native Settings Mod implements a very similar system:
 1. When a user enters the options menu, all `ModSettings` containers inside `NativeSettings.mods` are iterated over, and their `isHidden` function is executed. 
 2. if `isHidden` returns false, the `ModSettings`' section is created, with a horizontal line divider and title.
 3. The settings inside the `ModSettings` container are then iterated over, executing each setting's `isHidden` function. 
-4. If `isHidden` returns false, the setting's `addToOptionsPage` function is executed. This function constructs and adds the setting's UI components to the options menu, then creates and returns a `GameOption`, constructed from the setting with the `NativeSettings.CreateGameOption` function.
+4. If `isHidden` returns false, the setting's `addToOptionsPage` function is executed. This function constructs and adds the setting's UI components to the options menu, then creates and returns a `GameOption` (constructed from the setting) with the `NativeSettings.CreateGameOption` function.
 5. The newly constructed `gameOption` is added to the `MainOptions.GameOptions` object.
 6. All of Native Settings Mod, along with the vanilla settings, are added to the screen when `GameOptions:toUI` is executed and all Native Settings Mod are applied when `GameOptions:apply` is executed.
 
