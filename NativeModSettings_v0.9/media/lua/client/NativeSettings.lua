@@ -1,7 +1,7 @@
---***************************NATIVE SETTINGS MODS (v0.9)**********************
+--**************************NATIVE MOD SETTINGS (v0.9)************************
 --*                             GroovY / U_0047                              *
 --* mod resource allowing addition of custom settings to main options screen *
---*              https://github.com/U0047/NativeSettingsMod/                 *
+--*              https://github.com/U0047/NativeModSettings/                 *
 --*                                                                          *
 --****************************************************************************
 

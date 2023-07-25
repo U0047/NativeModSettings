@@ -1,6 +1,6 @@
-# NATIVE SETTINGS MODS DOCUMENTATION (RELEASE v0.9)
-https://github.com/U0047/NativeSettingsMod/
-Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://www,github.com/u0047/NativeModSetting/issue)
+# NATIVE MOD SETTINGS DOCUMENTATION (RELEASE v0.9)
+https://github.com/U0047/NativeModSettings/
+Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://www,github.com/u0047/NativeModSettings/issue)
 
 
 ## Table of Contents 
@@ -20,40 +20,40 @@ Please report bugs to u_0047@protonmail.com or open an issue on the [github repo
 ---
 
 ## Overview
-Native Settings Mod is a Zomboid modder's resource that gives mod developers the ability to add a variety of user-friendly, seamless mod settings to the Main Options page (accessed when clicking 'Options' from the Intro Screen or Pause Screen), under a new 'Native Settings Mod' tab. This allows mod users to easily configure mods without needing to edit mod files directly.
+Native Mod Settings is a Zomboid modder's resource that gives mod developers the ability to add a variety of user-friendly, seamless mod settings to the Main Options page (accessed when clicking 'Options' from the Intro Screen or Pause Screen), under a new 'Native Mod Settings' tab. This allows mod users to easily configure mods without needing to edit mod files directly.
 
 
-Native Settings Mod currently offers the following settings:
+Native Mod Settings currently offers the following settings:
 - `YesNoBox` - a boolean tick mark box
 - `YesNoMultiBox` - a titled list of boolean tick mark boxes
 - `ColorBox` - a button that allows users to pick from an assortment of colors when clicked
 - `ComboBox` - a drop-down menu allowing selection from a list of items
 - `Slider` - a draggable slider
 
-Native Settings Mod also gives mod developers the ability to create and add [custom settings](custom-settings).
+Native Mod Settings also gives mod developers the ability to create and add [custom settings](custom-settings).
 
 ---
 
 ## Installation
-Native Settings Mod can be installed like most mods; by subscribing to the Steam Workshop or through [manual installation](https://pzwiki.net/wiki/Installing_mods).
+Native Mod Settings can be installed like most mods; by subscribing to the Steam Workshop or through [manual installation](https://pzwiki.net/wiki/Installing_mods).
 
-Native Settings Mod must be enabled in the main menu's ['Mods' page as well as in individual savefiles' mods](https://pzwiki.net/wiki/Using_mods).
+Native Mod Settings must be enabled in the main menu's ['Mods' page as well as in individual savefiles' mods](https://pzwiki.net/wiki/Using_mods).
 
 ---
 
 ## A Word About Multiplayer Use
-At it's current version *(release v0.9),* Native Settings Mod **is completely untested** in multiplayer. 
+At it's current version *(release v0.9),* Native Mod Settings **is completely untested** in multiplayer. 
 
-While problems are not anticipated, Native Settings makes **zero** guarantee that Native Settings Mod will work in multiplayer.
+While problems are not anticipated, Native Mod Settings makes **zero** guarantee that Native Mod Settings will work in multiplayer.
 
-While security would more likely than not depend on how Native Settings Mods is utilized by mod developers, Native Setting Mods makes **zero** guarantee that it's settings are secure for multiplayer use.
+While security would more likely than not depend on how Native Mod Settingss is utilized by mod developers, Native Mod Settings makes **zero** guarantee that it's settings are secure for multiplayer use.
 
 ---
 
 ## Quick Guide
-*This quick guide introduces the basic concepts and usage of Native Settings Mod, by showing how to create a `YesNoBox` and add it to the Options Screen.*
+*This quick guide introduces the basic concepts and usage of Native Mod Settings, by showing how to create a `YesNoBox` and add it to the Options Screen.*
 
-Every mod that utilizes Native Settings Mod needs to create a `ModSettings` object with a title. The `ModSettings` object acts as a container for your mod's settings, and is rendered as it's own section in the Mod Settings page, with a title and horizontal line divider.
+Every mod that utilizes Native Mod Settings needs to create a `ModSettings` object with a title. The `ModSettings` object acts as a container for your mod's settings, and is rendered as it's own section in the Mod Settings page, with a title and horizontal line divider.
 
 ```lua
 require('NativeSettings')
@@ -88,7 +88,7 @@ While each setting has a slightly different implementation, every setting object
 
 The `toUI` function dictates how the setting should be displayed when a user enters the Options screen, and the `apply` function dictates what should happen when users click 'Accept' or 'Apply' in the Options screen.
 
-Both `toUI` and `apply` require a parameter `box` . `box` is a vanilla UI component (such as a tickbox or a drop-down menu) that Native Settings Mod wraps. As of now, all settings wrap one of these vanilla UI components, who have their own methods and attributes.
+Both `toUI` and `apply` require a parameter `box` . `box` is a vanilla UI component (such as a tickbox or a drop-down menu) that Native Mod Settings wraps. As of now, all settings wrap one of these vanilla UI components, who have their own methods and attributes.
 
 *Note: While the examples in ['Settings Setup'](#settings-setup) are sufficient enough for learning basic setting creation, it is recommended that mod developers consult the game file of the UI component that is being wrapped by each setting (listed in ['Settings Setup'](#settings-setup) ) for a better understanding of their methods and attributes.*
 
@@ -459,7 +459,7 @@ end
 
 ## Custom Settings
 
-Native Settings Mod provides mod developers the ability to create custom settings from the vanilla game's UI components.
+Native Mod Settings provides mod developers the ability to create custom settings from the vanilla game's UI components.
 
 Below is an example, where a setting with a dummy button is created and added to the Main Options Screen:
 
@@ -510,9 +510,9 @@ All custom settings require:
 
 ### The Nitty-Gritty Details
 
-*This section is intended for those who want a deeper understanding of how Native Setting Mod works. It is unlikely that you will need to read this unless you are developing custom settings.*
+*This section is intended for those who want a deeper understanding of how Native Mod Settings works. It is unlikely that you will need to read this unless you are developing custom settings.*
 
-When users start Zomboid and enter the main menu or start a game, a `MainScreen` object is created and instantiated from `MainScreen.instantiate`. This sets up a variety of user menus (and hides them), such as the character creation menus, world creation menus, and many more. Among these menus is  `mainOptions` , which is created with `mainOptions:create`. Native Settings Mod works through a very light modification (less than 20 lines) of the `mainOptions:create`  function.
+When users start Zomboid and enter the main menu or start a game, a `MainScreen` object is created and instantiated from `MainScreen.instantiate`. This sets up a variety of user menus (and hides them), such as the character creation menus, world creation menus, and many more. Among these menus is  `mainOptions` , which is created with `mainOptions:create`. Native Mod Settings works through a very light modification (less than 20 lines) of the `mainOptions:create`  function.
 
 The `mainOptions:create` method creates all the options menu's buttons, tabs, and settings. The creation of each setting makes up most of the `mainOptions:create` function, and typically looks close to the following:
 
@@ -534,19 +534,19 @@ self.gameOptions:add(gameOption)
 
 1. An X position, Y position, width, height, and title is passed to a function that creates a setting. A tooltip is then set.
 2. A `GameOption` is created with `GameOption:new`, which takes an option name and the just-created setting as arguments. The `GameOption` object more or less wraps the newly-created setting.
-3. `GameOption.toUI` and `GameOption.apply` functions are defined, that both take `self` as an argument. Inside both functions, a `box` variable is set to `self.control`, which is the `newSetting` we just created. Just like a setting made with Native Settings Mod, `toUI` defines how a setting should be displayed, and `apply` defines what should happen when users click "Apply" or "Accept" in the options menu.
+3. `GameOption.toUI` and `GameOption.apply` functions are defined, that both take `self` as an argument. Inside both functions, a `box` variable is set to `self.control`, which is the `newSetting` we just created. Just like a setting made with Native Mod Settings, `toUI` defines how a setting should be displayed, and `apply` defines what should happen when users click "Apply" or "Accept" in the options menu.
 4. Finally, the `GameOption` is added to `mainOptions.gameOptions` (which acts as a container for all `GameOption`s) with `self.gameOption:add`. 
 5. When a user enters the options menu, `GameOptions:toUI` is executed, which iterates through all the added `GameOption` objects' `toUI` functions, adding them to the screen.
 6. When a user applies the settings by clicking "Accept" or "Apply", `GameOptions:apply` is executed, which iterates through all the added `GameOption` objects' `apply` functions.
 
-Native Settings Mod implements a very similar system:
+Native Mod Settings implements a very similar system:
 
 1. When a user enters the options menu, all `ModSettings` containers inside `NativeSettings.mods` are iterated over, and their `isHidden` function is executed. 
 2. if `isHidden` returns false, the `ModSettings`' section is created, with a horizontal line divider and title.
 3. The settings inside the `ModSettings` container are then iterated over, executing each setting's `isHidden` function. 
 4. If `isHidden` returns false, the setting's `addToOptionsPage` function is executed. This function constructs and adds the setting's UI components to the options menu, then creates and returns a `GameOption` (constructed from the setting) with the `NativeSettings.CreateGameOption` function.
 5. The newly constructed `gameOption` is added to the `MainOptions.GameOptions` object.
-6. All of Native Settings Mod, along with the vanilla settings, are added to the screen when `GameOptions:toUI` is executed and all Native Settings Mod are applied when `GameOptions:apply` is executed.
+6. All of Native Mod Settings, along with the vanilla settings, are added to the screen when `GameOptions:toUI` is executed and all Native Mod Settings are applied when `GameOptions:apply` is executed.
 
 ### Miscellaneous Functions
 

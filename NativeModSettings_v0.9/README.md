@@ -1,44 +1,44 @@
-# NATIVE SETTINGS MOD (RELEASE v0.9)
+# Native Mod Settings (RELEASE v0.9)
 *mod resource allowing addition of custom settings to main options screen*
-https://github.com/U0047/NativeSettingsMod/
-Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://www,github.com/u0047/NativeModSetting/issue)
+https://github.com/U0047/NativeModSettings/
+Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://www,github.com/u0047/NativeModSettings/issue)
 
 ---
 
 ##Overview
-Native Settings Mod is a Zomboid modder's resource that gives mod developers the ability to add a variety of user-friendly, seamless mod settings to the native Main Options page (accessed when clicking 'Options' from the Intro Screen or Pause Screen), under a new 'Native Settings Mod' tab. This allows mod users to easily configure mods without needing to edit mod files directly.
+Native Mod Settings is a Zomboid modder's resource that gives mod developers the ability to add a variety of user-friendly, seamless mod settings to the native Main Options page (accessed when clicking 'Options' from the Intro Screen or Pause Screen), under a new 'Native Mod Settings' tab. This allows mod users to easily configure mods without needing to edit mod files directly.
 
-Native Settings Mod currently offers the following settings:
+Native Mod Settings currently offers the following settings:
 - `YesNoBox` - a boolean tick mark box
 - `YesNoMultiBox` - a titled list of boolean tick mark boxes
 - `ColorBox` - a button that allows users to pick from an assortment of colors when clicked
 - `ComboBox` - a drop-down menu allowing selection from a list of items
 - `Slider` - a draggable slider
 
-Native Settings Mod also gives mod developers the ability to create and add custom settings (consult the documentation under /doc/doc.md or the [github wiki]() for more info).
+Native Mod Settings also gives mod developers the ability to create and add custom settings (consult the documentation under /doc/doc.md or the [github wiki]() for more info).
 
 ---
 
 ## Installation
-Native Settings Mod can be installed like most mods; by subscribing to the Steam Workshop or through [manual installation](https://pzwiki.net/wiki/Installing_mods).
+Native Mod Settings can be installed like most mods; by subscribing to the Steam Workshop or through [manual installation](https://pzwiki.net/wiki/Installing_mods).
 
-Native Settings Mod must be enabled in the main menu's ['mods' page as well as in individual savefiles' mods](https://pzwiki.net/wiki/Using_mods).
+Native Mod Settings must be enabled in the main menu's ['mods' page as well as in individual savefiles' mods](https://pzwiki.net/wiki/Using_mods).
 
 ---
 
 ## About Multiplayer Use
-At it's current version *(release v0.9),* Native Settings Mod **is completely untested** in multiplayer. 
+At it's current version *(release v0.9),* Native Mod Settings **is completely untested** in multiplayer. 
 
-While problems are not anticipated, Native Settings makes **zero** guarantee that Native Settings Mod will work in multiplayer.
+While problems are not anticipated, Native Mod Settings makes **zero** guarantee that Native Mod Settings will work in multiplayer.
 
-While security would more likely than not depend on how Native Settings Mods is utilized by mod developers, Native Setting Mods makes **zero** guarantee that it's settings are secure for multiplayer use.
+While security would more likely than not depend on how Native Mod Settingss is utilized by mod developers, Native Mod Setting makes **zero** guarantee that it's settings are secure for multiplayer use.
 
 ---
 
 ## Quick Guide
-*This quick guide introduces the basic concepts and usage of Native Settings Mod, by showing how to create a `YesNoBox` and add it to the Options Screen.*
+*This quick guide introduces the basic concepts and usage of Native Mod Settings, by showing how to create a `YesNoBox` and add it to the Options Screen.*
 
-Every mod that utilizes Native Settings Mod needs to create a `ModSettings` object with a title. The `ModSettings` object acts as a container for your mod's settings, and is rendered as it's own section in the Mod Settings page, with a title and horizontal line divider.
+Every mod that utilizes Native Mod Settings needs to create a `ModSettings` object with a title. The `ModSettings` object acts as a container for your mod's settings, and is rendered as it's own section in the Mod Settings page, with a title and horizontal line divider.
 
 ```lua
 require('NativeSettings')
@@ -73,7 +73,7 @@ While each setting has a slightly different implementation, every setting object
 
 The `toUI` function dictates how the setting should be displayed when a user enters the Options screen, and the `apply` function dictates what should happen when users click 'Accept' or 'Apply' in the Options screen.
 
-Both `toUI` and `apply` require a parameter `box` . `box` is a vanilla UI component (such as a tickbox or a drop-down menu) that Native Settings Mod wraps. As of now, all settings wrap one of these vanilla UI components, who have their own methods and attributes.
+Both `toUI` and `apply` require a parameter `box` . `box` is a vanilla UI component (such as a tickbox or a drop-down menu) that Native Mod Settings wraps. As of now, all settings wrap one of these vanilla UI components, who have their own methods and attributes.
 
 *Note: While the examples in ['Settings Setup'](#settings-setup) are sufficient enough for learning basic setting creation, it is recommended that mod developers consult the game file of the UI component that is being wrapped by each setting (listed in ['Settings Setup'](#settings-setup) ) for a better understanding of their methods and attributes.*
 
