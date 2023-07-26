@@ -1,6 +1,6 @@
 # NATIVE MOD SETTINGS DOCUMENTATION (RELEASE v0.9)
 https://github.com/U0047/NativeModSettings/
-Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://www,github.com/u0047/NativeModSettings/issue)
+Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://github.com/U0047/NativeModSettings/issues)
 
 
 ## Table of Contents 

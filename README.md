@@ -1,11 +1,13 @@
 # Native Mod Settings (RELEASE v0.9)
 *mod resource allowing addition of custom settings to main options screen*
+
 https://github.com/U0047/NativeModSettings/
-Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://www,github.com/u0047/NativeModSettings/issue)
+
+Please report bugs to u_0047@protonmail.com or open an issue on the [github repo](https://github.com/U0047/NativeModSettings/issues)
 
 ---
 
-##Overview
+## Overview
 Native Mod Settings is a Zomboid modder's resource that gives mod developers the ability to add a variety of user-friendly, seamless mod settings to the native Main Options page (accessed when clicking 'Options' from the Intro Screen or Pause Screen), under a new 'Native Mod Settings' tab. This allows mod users to easily configure mods without needing to edit mod files directly.
 
 Native Mod Settings currently offers the following settings:
@@ -15,7 +17,7 @@ Native Mod Settings currently offers the following settings:
 - `ComboBox` - a drop-down menu allowing selection from a list of items
 - `Slider` - a draggable slider
 
-Native Mod Settings also gives mod developers the ability to create and add custom settings (consult the documentation under /doc/doc.md or the [github wiki]() for more info).
+Native Mod Settings also gives mod developers the ability to create and add custom settings (consult the documentation under /doc/doc.md for more info).
 
 ---
 
